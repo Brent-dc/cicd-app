@@ -49,8 +49,10 @@ Running the build should give this result without the TestSampleApp line at the 
 
 
 ##  1.6 Add a job to test the application
-A container's IP can be found with docker inspect < container name >.
-
+A container's IP can be found with:
+``` 
+ docker inspect <container name>.
+``` 
 ex.
 samplerunning: 172.17.0.2
 jenkins_server: 172.17.0.3
