@@ -1,6 +1,6 @@
 #!/bin/bash
 set -euo pipefail
-
+rm -rf /var/jenkins_home/workspace/BuildSampleApp/tempdir
 mkdir tempdir
 mkdir tempdir/templates
 mkdir tempdir/static
