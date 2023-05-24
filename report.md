@@ -7,16 +7,12 @@ Making sample-app.sh executable
 ```
 chmod u+x sample-app.sh
 ```
-
- the assigned ip (via the yaml file) and the port 5050 should give 
+Running sample-app.sh will create another container with the application.
+With the assigned ip of the dockerlab (via the yaml file) and the forwarded port 5050 should give 
  ```
  <h1>You are calling me from 192.168.56.1</h1>
 ```
-
-Before a build you shouldn't forget to remove the samplerunning container in the sample-app.sh script 
-and add a line in the shell script to remove the tempdir folder in/var/jenkins_home/workspace/SampleApp
-if the volume is persisted
-(Otherwise the build will fail).
+Removing the SampleRunning docker
 ```
 docker stop samplerunning
 docker rm samplerunning
@@ -38,7 +34,7 @@ docker run -p 8080:8080 -u root \
  ```
 With the given port that is forwarded 8080 in this case you can open the jenkins dashboard on your physical system
 ![Screenshot 2023-05-24 094501](https://github.com/Brent-dc/cicd-app/assets/61025631/70a0698d-9f5f-4b8b-929c-b8e580cac347)
-Password:d8146a7836eb45a2a983ef8e1b61afad
+
 
 
 ## 1.5 Use Jenkins to build your application
